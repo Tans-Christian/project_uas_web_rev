@@ -7,8 +7,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     $query = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
-    $query->bind_param("sss", $name, $email, $password);
-    if ($query->execute()) {
+    $query->execute([$name, $email, $password]);
+
+    if ($query) {
         header("Location: login.php");
     } else {
         $error = "Gagal mendaftar!";
