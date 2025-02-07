@@ -29,9 +29,23 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <form method="post">
             <input type="text" name="name" placeholder="Nama" class="form-control mb-2" required>
             <input type="email" name="email" placeholder="Email" class="form-control mb-2" required>
-            <input type="password" name="password" placeholder="Password" class="form-control mb-2" required>
+            <div class="input-group mb-2">
+                <input type="password" id="password" name="password" placeholder="Password" class="form-control" required>
+                <button type="button" class="btn btn-outline-secondary" onclick="togglePassword()">👁</button>
+            </div>
             <button type="submit" class="btn btn-success">Daftar</button>
         </form>
     </div>
+
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
 </body>
 </html>
