@@ -1,5 +1,8 @@
 <?php
-session_start();
+// Check if a session is already started
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 try {
     $conn = new PDO("mysql:host=localhost;dbname=project_uas", "root", "");

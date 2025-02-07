@@ -1,34 +1,141 @@
+/* style.css */
+/* Navbar Styling */
+.navbar {
+    background: rgba(0, 0, 0, 0.8); /* Transparan dengan efek gelap */
+    backdrop-filter: blur(10px); /* Efek blur untuk kesan modern */
+    padding: 15px 0;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #f1c40f !important; /* Warna emas untuk branding */
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: #f39c12 !important; /* Warna emas lebih gelap saat hover */
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    color: white !important;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+.navbar-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.2); /* Efek hover transparan */
+    transform: scale(1.1); /* Sedikit membesar saat hover */
+}
+
+/* Navbar Responsif */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 800px;
-    margin: auto;
-    padding-top: 20px;
-}
-
-.navbar {
-    background-color: #343a40;
-    padding: 15px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 15px;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-}
-
-.footer {
-    background-color: #343a40;
-    color: white;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    padding: 10px 0;
-    margin-top: 30px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h2, h3 {
+    color: #333;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+
+.btn-success {
+    background: #2ecc71;
+    color: #fff;
+    border: none;
+}
+
+.btn-success:hover {
+    background: #27ae60;
+    transform: scale(1.05);
+}
+
+.list-group a {
+    display: block;
+    background: #f8f9fa;
+    color: #333;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.list-group a:hover {
+    background: #3498db;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
 }

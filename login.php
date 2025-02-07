@@ -1,19 +1,18 @@
 <?php
-include 'config/koneksi.php';
+include 'includes/header.php';
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
     $query = $conn->prepare("SELECT * FROM users WHERE email = ?");
-    $query->bind_param("s", $email);
-    $query->execute();
-    $result = $query->get_result();
+    $query->execute([$email]); // Gunakan execute dengan array parameter
+    $result = $query->fetch(PDO::FETCH_ASSOC);
 
-    if ($row = $result->fetch_assoc()) {
-        if (password_verify($password, $row['password'])) {
-            $_SESSION['user_id'] = $row['id'];
-            $_SESSION['name'] = $row['name'];
+    if ($result) {
+        if (password_verify($password, $result['password'])) {
+            $_SESSION['user_id'] = $result['id'];
+            $_SESSION['name'] = $result['name'];
             header("Location: dashboard.php");
             exit;
         } else {
