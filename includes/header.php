@@ -1,12 +1,13 @@
 <?php
 session_start();
-include './config/koneksi.php'
+include './config/koneksi.php';
 ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>Company Info</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNS Company</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
@@ -14,8 +15,7 @@ include './config/koneksi.php'
 <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #007bff, #00bcd4);">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.php">
-            <!-- <img src="logo.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;"> -->
-            <span class="font-weight-bold" style="font-size: 1.5rem;">Perusahaan XYZ</span>
+            <span class="font-weight-bold" style="font-size: 1.5rem;">TNS Company</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -45,6 +45,3 @@ include './config/koneksi.php'
         </div>
     </div>
 </nav>
-
-<!-- Container Section -->
-<div class="container mt-4">
