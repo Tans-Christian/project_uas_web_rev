@@ -3,7 +3,7 @@
 <footer class="footer mt-auto py-3 text-white" style="background: linear-gradient(to right, #007bff, #00bcd4);">
     <div class="container text-center">
         <p class="mb-1">© <?= date("Y"); ?> TNS Company. COPYRIGHT@.</p>
-        <p class="small">Making By ChristianOctanKurniaPitoyo_22552011029 <a href="#" class="text-white fw-bold">Development Team</a></p>
+        <p class="small">Making By Kelompok 10 <a href="includes/development_page.php" class="text-white fw-bold">Development Team</a></p>
     </div>
 </footer>
 
